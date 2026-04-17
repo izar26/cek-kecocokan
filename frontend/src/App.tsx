@@ -39,7 +39,7 @@ const EMPTY_PERSON: PersonData = {
   traits: [], hobbies: [], habits: [], description: ''
 };
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://couple-api.hexanusa.com';
 const API_URL = `${API_BASE}/api/analyze`;
 
 // ========== MODE OPTIONS ==========
