@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import Database from 'better-sqlite3';
+import { DatabaseSync } from 'node:sqlite';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -19,8 +19,8 @@ const port = process.env.PORT || 5000;
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 
 // ========== DATABASE SETUP ==========
-const db = new Database(join(__dirname, 'kecocokan.db'));
-db.pragma('journal_mode = WAL');
+const db = new DatabaseSync(join(__dirname, 'kecocokan.db'));
+db.exec('PRAGMA journal_mode = WAL');
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS history (
