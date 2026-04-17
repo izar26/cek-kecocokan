@@ -9,6 +9,12 @@ backend/.env
 frontend/.env
 *.local
 
+# Build outputs
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+backend/dist/
+
 # SQLite Database
 backend/*.db
 backend/*.db-shm
