@@ -1,4 +1,4 @@
-import { useState, KeyboardEvent, useEffect, useCallback } from 'react';
+import { useState, type KeyboardEvent, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Heart, ArrowRight, ArrowLeft, RefreshCw, X, Plus, UserRound, Check, ChevronRight, Clock, Trash2, Lock, Eye, EyeOff, ChevronDown, ArrowUpLeft } from 'lucide-react';
 
